@@ -1,22 +1,37 @@
-<form class="row g-3">
-    <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">BOOK TITLE</label>
-        <input type="text" class="form-control" id="inputEmail4" [(ngModel)]='book.book_TITLE' name="title">
-    </div>
-    <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">BOOK AUTHOR</label>
-        <input type="text" class="form-control" id="inputPassword4" [(ngModel)]='book.book_AUTHOR' name="author">
-    </div>
-    <div class="col-12">
-        <label for="inputAddress" class="form-label">BOOK TYPE</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="" [(ngModel)]='book.book_TYPE' name="type">
-    </div>
-    <div class="col-md-2">
-        <label for="inputZip" class="form-label">BOOK PRICE</label>
-        <input type="text" class="form-control" id="inputZip" [(ngModel)]='book.book_PRICE' name="price">
-    </div>
-    <div class="col-12">
-        <button type="submit" class="btn btn-primary" (click)="sendPostRequest()">ADD BOOK</button>
-    </div>
-</form>
 <h1>{{msg}}</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <form class="row alert alert-primary">
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">BOOK TITLE</label>
+                    <input type="text" class="form-control" id="inputEmail4" [(ngModel)]='book.book_TITLE' name="title">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">BOOK AUTHOR</label>
+                    <input type="text" class="form-control" id="inputPassword4" [(ngModel)]='book.book_AUTHOR'
+                        name="author">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">BOOK TYPE</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder=""
+                        [(ngModel)]='book.book_TYPE' name="type">
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">BOOK PRICE</label>
+                    <input type="text" class="form-control" id="inputZip" [(ngModel)]='book.book_PRICE' name="price">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" (click)="sendPostRequest()">ADD BOOK</button>
+                </div>
+            </form>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+</div>

@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookComponent } from './book/book.component';
+import { HommeComponent } from './homme/homme.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"addbook",pathMatch:"full"},
+  {path:"",component:HommeComponent},
   {path:"addbook",component:BookComponent}
 ];
 

@@ -7,11 +7,13 @@ import { BookServiceService } from './book-service.service';
 import { BookComponent } from './book/book.component';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HommeComponent } from './homme/homme.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent
+    BookComponent,
+    HommeComponent
   ],
   imports: [
     BrowserModule,
