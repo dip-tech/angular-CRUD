@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookComponent } from './book/book.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"addBook",pathMatch:'full'},
+  {path:"",redirectTo:"addbook",pathMatch:"full"},
   {path:"addbook",component:BookComponent}
 ];
 

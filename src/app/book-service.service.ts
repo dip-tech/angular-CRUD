@@ -11,7 +11,6 @@ export class BookServiceService {
    }
 
    public addBook(b:Book){
-      console.log(b);
       return this.http.post("http://localhost:8001/book/add-book",b,{responseType:'text' as 'json'});
    }
 }

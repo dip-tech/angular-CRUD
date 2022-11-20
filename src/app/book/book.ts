@@ -5,7 +5,8 @@ export class Book{
     book_TYPE:any;
     book_PRICE:any;
 
-    constructor(btitle:any,bauthor:any,btype:any,bprice:any){
+    constructor(bid:any,btitle:any,bauthor:any,btype:any,bprice:any){
+        this.book_ID=bid;
         this.book_TITLE=btitle;
         this.book_AUTHOR=bauthor;
         this.book_TYPE=btype

@@ -11,7 +11,7 @@ export class BookComponent implements OnInit {
 
   
   msg:any = "";
-  book: Book = new Book("","","",0);
+  book: Book = new Book("","","","",0);
 
   constructor(private bservice: BookServiceService) { }
 
