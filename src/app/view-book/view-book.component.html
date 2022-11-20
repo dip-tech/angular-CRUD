@@ -23,7 +23,7 @@
                         <td>{{book.book_AUTHOR}}</td>
                         <td>{{book.book_TYPE}}</td>
                         <td>{{book.book_PRICE}}</td>
-                        <td><button type="button" class="btn btn-warning">UPDATE BOOK</button> | <button type="button" class="btn btn-danger" (click)="sendDeleteRequest(book.book_ID)">DELETE BOOK</button></td>
+                        <td><a href="updatebook/{{book.book_ID}}" class="btn btn-warning">UPDATE BOOK</a> | <button type="button" class="btn btn-danger" (click)="sendDeleteRequest(book.book_ID)">DELETE BOOK</button></td>
                     </tr>
                 </tbody>
             </table>
