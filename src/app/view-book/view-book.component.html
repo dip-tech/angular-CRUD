@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            ANGULAR CRUD
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">ALL BOOKS LIST</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">BOOK TITLE</th>
+                        <th scope="col">BOOK AUTHOR</th>
+                        <th scope="col">BOOK TYPE</th>
+                        <th scope="col">BOOK PRICE</th>
+                        <th scope="col">ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of bookList">
+                        <th scope="row">{{book.book_ID}}</th>
+                        <td>{{book.book_TITLE}}</td>
+                        <td>{{book.book_AUTHOR}}</td>
+                        <td>{{book.book_TYPE}}</td>
+                        <td>{{book.book_PRICE}}</td>
+                        <td><button type="button" class="btn btn-warning">UPDATE BOOK</button> | <button type="button" class="btn btn-danger" (click)="sendDeleteRequest(book.book_ID)">DELETE BOOK</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

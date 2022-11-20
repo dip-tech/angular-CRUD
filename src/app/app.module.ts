@@ -8,12 +8,16 @@ import { BookComponent } from './book/book.component';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HommeComponent } from './homme/homme.component';
+import { ViewBookComponent } from './view-book/view-book.component';
+import { UpdateBookComponent } from './update-book/update-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
-    HommeComponent
+    HommeComponent,
+    ViewBookComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,
