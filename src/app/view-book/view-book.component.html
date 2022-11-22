@@ -1,10 +1,11 @@
-<div class="container">
-    <div class="card">
-        <div class="card-header">
-            ANGULAR CRUD
+<div class="container mt-5">
+    <div *ngIf="bookListLength>0 else NoBook" class="card ">
+        
+        <div class="card-header alert alert-primary">
+            <h5 class="card-title">ALL BOOKS LIST &nbsp; | &nbsp; <a routerLink="/" class="btn btn-info">HOME</a></h5>
         </div>
         <div class="card-body">
-            <h5 class="card-title">ALL BOOKS LIST</h5>
+            
             <table class="table">
                 <thead>
                     <tr>
@@ -23,10 +24,17 @@
                         <td>{{book.book_AUTHOR}}</td>
                         <td>{{book.book_TYPE}}</td>
                         <td>{{book.book_PRICE}}</td>
-                        <td><a href="updatebook/{{book.book_ID}}" class="btn btn-warning">UPDATE BOOK</a> | <button type="button" class="btn btn-danger" (click)="sendDeleteRequest(book.book_ID)">DELETE BOOK</button></td>
+                        <td><a routerLink="/updatebook/{{book.book_ID}}" class="btn btn-warning">UPDATE BOOK</a> |
+                            <button type="button" class="btn btn-danger"
+                                (click)="sendDeleteRequest(book.book_ID)">DELETE BOOK</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <ng-template #NoBook>
+        <div *ngIf="noRecord" class="alert alert-danger text-center" role="alert">
+            <h1>{{ noRecord }}</h1><br><a routerLink="/" class="btn btn-info">HOME</a>
+        </div>
+    </ng-template>
 </div>

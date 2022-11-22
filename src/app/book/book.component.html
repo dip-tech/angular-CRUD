@@ -1,11 +1,11 @@
-<h1>{{msg}}</h1>
 
-<div class="container">
+<div class="container mt-5">
+    
     <div class="row">
         <div class="col">
 
         </div>
-        <div class="col">
+        <div class="col-md-6">
             <form class="row alert alert-primary">
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label">BOOK TITLE</label>
@@ -21,12 +21,12 @@
                     <input type="text" class="form-control" id="inputAddress" placeholder=""
                         [(ngModel)]='book.book_TYPE' name="type">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <label for="inputZip" class="form-label">BOOK PRICE</label>
                     <input type="text" class="form-control" id="inputZip" [(ngModel)]='book.book_PRICE' name="price">
                 </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary" (click)="sendPostRequest()">ADD BOOK</button>
+                <div class="col-12 mt-5">
+                    <button type="submit" class="btn btn-primary" (click)="sendPostRequest()">ADD BOOK</button>&nbsp; | &nbsp;<a routerLink="/viewbook" class="btn btn-warning">VIEW BOOK</a>&nbsp; | &nbsp;<a routerLink="/" class="btn btn-info">MENU</a>
                 </div>
             </form>
         </div>
