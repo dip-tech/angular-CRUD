@@ -13,6 +13,8 @@ export class ViewBookComponent implements OnInit {
   bookList:any=[];
   bookListLength:number=0;
   noRecord:string="";
+  confrimDeleteBookId:any="";
+  
 
   constructor(private bService:BookServiceService, private router:Router) { 
    
@@ -28,13 +30,17 @@ export class ViewBookComponent implements OnInit {
     
   }
 
+  passDeleteBookID(id:number){
+    this.confrimDeleteBookId=id;
+  }
+
   
 
   public sendDeleteRequest(id:number){
     let r=this.bService.deleteBook(id);
     r.subscribe((data)=>{
-      alert(data);
       this.ngOnInit();
+      
     });
     
   }

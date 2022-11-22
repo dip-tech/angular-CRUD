@@ -1,11 +1,10 @@
 <div class="container mt-5">
-    <div *ngIf="bookListLength>0 else NoBook" class="card ">
-        
+    <div *ngIf="bookListLength>0 else NoBook" class="card">
+
         <div class="card-header alert alert-primary">
             <h5 class="card-title">ALL BOOKS LIST &nbsp; | &nbsp; <a routerLink="/" class="btn btn-info">HOME</a></h5>
         </div>
         <div class="card-body">
-            
             <table class="table">
                 <thead>
                     <tr>
@@ -25,8 +24,10 @@
                         <td>{{book.book_TYPE}}</td>
                         <td>{{book.book_PRICE}}</td>
                         <td><a routerLink="/updatebook/{{book.book_ID}}" class="btn btn-warning">UPDATE BOOK</a> |
-                            <button type="button" class="btn btn-danger"
-                                (click)="sendDeleteRequest(book.book_ID)">DELETE BOOK</button></td>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#confrimDeleteModal" (click)="passDeleteBookID(book.book_ID)">DELETE
+                                BOOK</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -37,4 +38,23 @@
             <h1>{{ noRecord }}</h1><br><a routerLink="/" class="btn btn-info">HOME</a>
         </div>
     </ng-template>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="confrimDeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">ARE YOU SURE? </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-danger"
+                        (click)="sendDeleteRequest(confrimDeleteBookId)">DELETE</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
