@@ -1,11 +1,11 @@
-<div class="container mt-5">
-    <div *ngIf="bookListLength>0 else NoBook" class="card">
+<div class="container  mt-5" >
+    <div *ngIf="bookListLength>0 else NoBook" class="card w-100">
 
         <div class="card-header alert alert-primary">
             <h5 class="card-title">ALL BOOKS LIST &nbsp; | &nbsp; <a routerLink="/" class="btn btn-info">HOME</a></h5>
         </div>
         <div class="card-body">
-            <table class="table">
+            <table class="table table-sm">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -19,7 +19,7 @@
                 <tbody>
                     <tr *ngFor="let book of bookList">
                         <th scope="row">{{book.book_ID}}</th>
-                        <td>{{book.book_TITLE}}</td>
+                        <td class="w-25">{{book.book_TITLE}}</td>
                         <td>{{book.book_AUTHOR}}</td>
                         <td>{{book.book_TYPE}}</td>
                         <td>{{book.book_PRICE}}</td>
