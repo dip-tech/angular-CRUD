@@ -1,0 +1,34 @@
+<div class="container-fluid mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col-md-6">
+                <div class="card border-dark mb-3">
+                    <div class="card-header">Sign in</div>
+                    <div class="card-body text-dark">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" name="username" [(ngModel)]="loginUser.username">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="loginUser.password">
+                            </div>
+                            <button type="button" class="btn btn-primary" (click)="doLogin()">Signin</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+</div>

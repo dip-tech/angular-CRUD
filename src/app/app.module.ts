@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HommeComponent } from './homme/homme.component';
 import { ViewBookComponent } from './view-book/view-book.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UpdateBookComponent } from './update-book/update-book.component';
     BookComponent,
     HommeComponent,
     ViewBookComponent,
-    UpdateBookComponent
+    UpdateBookComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
