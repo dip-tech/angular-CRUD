@@ -11,4 +11,9 @@ export class UserService {
   public sendLoginRequest(u:User){
     return this.http.post("http://localhost:8001/user/login",u,{responseType:"text"});
   }
+
+  public sendAddUserRequest(u:User){
+    return this.http.post("http://localhost:8001/user/adduser",u,{responseType:"text"});
+  }
+
 }

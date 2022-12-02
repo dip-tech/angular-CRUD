@@ -17,6 +17,9 @@ export class BookComponent implements OnInit {
   constructor(private bservice: BookServiceService,private router:Router) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem("_auth_token")==null){
+      this.router.navigateByUrl("/login");
+    }
   }
 
   public sendPostRequest() {
