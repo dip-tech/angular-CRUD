@@ -11,6 +11,8 @@ import { HommeComponent } from './homme/homme.component';
 import { ViewBookComponent } from './view-book/view-book.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
 import { LoginComponent } from './login/login.component';
+import { SuccessComponent } from './success/success.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { LoginComponent } from './login/login.component';
     HommeComponent,
     ViewBookComponent,
     UpdateBookComponent,
-    LoginComponent
+    LoginComponent,
+    SuccessComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

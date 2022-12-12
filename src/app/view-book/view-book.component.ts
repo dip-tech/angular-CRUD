@@ -25,12 +25,15 @@ export class ViewBookComponent implements OnInit {
       this.router.navigateByUrl("/login");
     }
     else {
-      let resp = this.bService.getAllBooks();
-      resp.subscribe((data) => {
-        this.bookList = data;
-        this.bookListLength = this.bookList.length;
-      });
-      setTimeout(() => { this.noRecord = "NO BOOK RECORD FOUND ON SYSTEM."; }, 500)
+      if (localStorage.getItem("isTokenValid") == "true") {
+        let resp = this.bService.getAllBooks();
+        resp.subscribe((data) => {
+          this.bookList = data;
+          this.bookListLength = this.bookList.length;
+        });
+        setTimeout(() => { this.noRecord = "NO BOOK RECORD FOUND ON SYSTEM."; }, 500)
+      }
+
     }
 
   }
